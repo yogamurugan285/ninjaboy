@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ninja boy mart</title>
+
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+            
+        }
+
+        .header {
+
+            display: flex;
+            background-color: rgba(231, 229, 229, 0.743);
+            width: 100vw;
+            height: 60px;
+        }
+
+        ul,
+        li {
+            display: inline;
+            color: black;
+
+
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        ul {
+            position: absolute;
+            right: 8%;
+            top: 3%;
+            font-size: 20px;
+
+        }
+
+        li {
+            margin: 40px;
+        }
+
+
+        .cart {
+            position: absolute;
+            margin-top: 0px;
+            right: 56%;
+            width: 26px;
+            height: 26px;
+        }
+
+        .login {
+            position: absolute;
+            margin-top: 0px;
+            right: 90%;
+            width: 26px;
+            height: 26px;
+        }
+
+        .contact {
+            position: absolute;
+            margin-top: 0px;
+            right: 28%;
+            width: 26px;
+            height: 26px;
+        }
+
+        .search {
+            position: absolute;
+            margin-top: 17px;
+            left: 21%;
+            opacity: 0.6;
+            z-index: 1;
+            width: 26px;
+            height: 26px;
+        }
+
+        .ninja {
+            display: flex;
+            font-style: oblique;
+            font-size: 15px;
+            color: rgb(0, 255, 0);
+            position: absolute;
+            left: 3%;
+        }
+
+        .ninja sub {
+            font-size: 14px;
+            color: black;
+        }
+
+        .searchbar input {
+            position: absolute;
+            top: 2%;
+            left: 20%;
+            font-size: 15px;
+            background-color: rgba(143, 128, 128, 0.267);
+            width: 550px;
+            height: 35px;
+            border-radius: 12px;
+            border: hidden;
+            outline: transparent;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+        }
+
+        .searchbar input:focus {
+            border: 2px;
+            border-style: solid;
+            border-color: rgb(48, 48, 48);
+        }
+
+
+
+
+        .first-container {
+            margin-top: 20px;
+            margin-right: 10px;
+            margin-left: 10px;
+            display: grid;
+            border-radius: 20px;
+            width: 100vw;
+            height: 130px;
+            background-color: rgba(143, 128, 128, 0.267);
+            grid-template-columns: repeat(9, 1fr);
+            justify-items: center;
+        }
+        .fc-1 img {
+            margin-top: 20px;
+            width: 80px;
+            height: 80px;
+            border-radius: 10px;
+        }
+        .fc-1 h3 {
+            text-align: center;
+        }
+
+
+
+
+        .second-container {
+            margin-top: 20px;
+            margin-right: 10px;
+            margin-left: 10px;
+            display: grid;
+            border-radius: 20px;
+            width: 100vw;
+            height: 250px;
+            background-color: rgba(143, 128, 128, 0.267);
+        }
+        .sc-1 img {
+            border-radius: 20px;
+            width: 100vw;
+            height: 250px;
+        }
+
+
+
+
+
+        .third-container {
+            margin-top: 20px;
+            margin-right: 10px;
+            margin-left: 10px;
+            display: grid;
+            border-radius: 20px;
+            width: 100vw;
+            height: 300px;
+            background-color: rgba(143, 128, 128, 0.267);
+            background-color: rgba(143, 128, 128, 0.267);
+            grid-template-areas:'tc-1 tc-2 ' ;
+            grid-template-columns:280px  1fr;
+            grid-template-rows: 1fr ;
+        }
+        .third-container #tc-1 img{
+            border-radius: 20px;
+            height: 300px;
+            width: 260px;
+            border: 5px solid white;
+        }
+        .third-container #tc-2 img{
+            border-radius: 20px;
+            height: 300px;
+            width:1080px;
+            border: 5px solid white;
+        }
+
+
+
+
+        .fourth-container {
+            margin-top: 20px;
+            margin-right: 10px;
+            margin-left : 10px;
+            display: grid;
+            border-radius: 20px;
+            width: 100vw;
+            height: 220px;
+            background-color: rgba(143, 128, 128, 0.267);
+            grid-template-areas:'fc-1 fc-2 fc-5 fc-5' 'fc-3 fc-4 fc-5 fc-5'  ;
+            grid-template-columns:170px 170px 1fr 1fr;
+            grid-template-rows: 1fr 1fr ;
+        }
+        .fourth-container  img{
+            margin-top: 10px;
+            place-items: start end;
+            border-radius: 10px;
+            height: 70px;
+            width: 100px;
+            
+        }
+        .fourth-container #fc-5 img{
+            margin-top: 0px;
+            border: 2px solid white;
+            border-radius: 10px;
+            width: 1030px;
+            height: 220px;
+        }
+        #fc-1,#fc-2, #fc-3, #fc-4 {
+            text-align: center;
+            font-size: 10px;
+        }
+        #fc-1{
+            grid-area: fc-1;
+        }
+        #fc-2{
+            grid-area: fc-2;
+        }
+        #fc-3{
+            grid-area: fc-3;
+        }
+        #fc-4{
+            grid-area: fc-4;
+        }
+        #fc-5{
+            grid-area: fc-5;
+        }
+
+
+
+
+
+        .fifth-container {
+            margin-top: 20px;
+            margin-right: 10px;
+            margin-left: 10px;
+            display: grid;
+            border-radius: 20px;
+            width: 100vw;
+            height: 600px;
+            background-color: rgba(143, 128, 128, 0.267);
+            grid-template-areas: 'box-1 box-2 box-3';
+            grid-template-columns: 1fr 1fr 1fr;
+            column-gap: 20px;
+            grid-template-rows: 560px;
+        }
+        #box-1{
+            margin-left: 20px;
+            margin-top: 40px;
+            border-radius: 15px;
+            background-color: white;
+            display: grid;
+            justify-items: center;
+            grid-template-areas:'b1 b2''b3 b4' ;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+        }
+        #box-1 img{
+            margin-top: 50px;
+            width: 150px;
+            height: 110px;
+            
+        }
+        #box-1 h4{
+            text-align: center;
+        }
+        #box-2{
+            margin-top: 40px;
+            border-radius: 15px;
+            background-color: white;
+            display: grid;
+            grid-template-areas:'c1 c2 c2''c3 c4 c5' ;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr ;
+            justify-items: center;
+            
+        }
+        #c1,#c2 img{
+            margin-left: 40px;
+        }
+        #box-2 img{
+            margin-top: 30px;
+            width: 130px;
+            height: 160px;
+            border-radius: 20px;
+        }
+        #box-2 h4{
+            text-align: center;
+        }
+        #c1{
+            grid-area: c1;
+        }
+        #c2{
+            grid-area: c2;
+        }
+        #c3{
+            grid-area: c3;
+        }
+        #c4{
+            grid-area: c4;
+        }
+        #c5{
+            grid-area: c5;
+        }
+        #box-3{
+            margin-top: 40px;
+            border-radius: 15px;
+            background-color: white;
+            display: grid;
+            justify-items: center;
+            grid-template-areas:'d1 d2''d3 d4' ;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            
+        }
+        #box-3 img{
+            margin-top: 70px;
+            width: 130px;
+            height: 100px;
+            border-radius: 20px;
+        }
+        #box-3 h4{
+            text-align: center;
+        }
+
+
+
+
+        .sixth-container {
+            margin-top: 20px;
+            margin-right: 10px;
+            margin-left: 10px;
+            display: grid;
+            border-radius: 20px;
+            width: 100vw;
+            height: 600px;
+            background-color: rgba(143, 128, 128, 0.267);
+            grid-template-areas: 'bx-1 bx-2 bx-3';
+            grid-template-columns: 1fr 1fr 1fr;
+            column-gap: 20px;
+            grid-template-rows: 560px;
+        }
+        #bx-1{
+            margin-top: 40px;
+            margin-left: 20px;
+            border-radius: 15px;
+            background-color: white;
+            display: grid;
+            grid-template-areas:'e1 e2 e2''e3 e4 e5' ;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr ;
+            justify-items: center;
+            
+        }
+        #e1,#e2 img{
+            margin-left: 40px;
+        }
+        #bx-1 img{
+            margin-top: 30px;
+            width: 130px;
+            height: 160px;
+            border-radius: 20px;
+        }
+        #bx-1 h4{
+            text-align: center;
+        }
+        #e1{
+            grid-area: e1;
+        }
+        #e2{
+            grid-area: e2;
+        }
+        #e3{
+            grid-area: e3;
+        }
+        #e4{
+            grid-area: e4;
+        }
+        #e5{
+            grid-area: e5;
+        }
+        #bx-2{
+            margin-top: 40px;
+            border-radius: 15px;
+            background-color: white;
+            display: grid;
+            justify-items: center;
+            grid-template-areas:'f1 f2''f3 f4' ;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+        }
+        #bx-2 img{
+            margin-top: 50px;
+            width: 120px;
+            height: 140px;
+            
+        }
+        #bx-2 h4{
+            text-align: center;
+        }
+        #bx-3{
+            margin-top: 40px;
+            border-radius: 15px;
+            background-color: white;
+            display: grid;
+            justify-items: center;
+            grid-template-areas:'g1 g2''g3 g4' ;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            
+        }
+        #bx-3 img{
+            margin-top: 70px;
+            width: 170px;
+            height: 150px;
+            border-radius: 20px;
+        }
+        #bx-3 h4{
+            text-align: center;
+        }
+
+
+
+
+        .seventh-container {
+            margin-top: 20px;
+            margin-right: 10px;
+            margin-left: 10px;
+            display: grid;
+            border-radius: 20px;
+            width: 100vw;
+            height: 400px;
+            background-color: rgba(143, 128, 128, 0.267);
+        }
+        .header ul:first-child{
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <ul>
+            <a href="index.html">
+                <li><img class="login" src="icons/contact.png">Login</li>
+            </a>
+            <a href=" ">
+                <li><img class="cart" src="icons/3144456.png">cart</li>
+            </a>
+            <a href="#contact">
+                <li><img class="contact" src="icons/operator.png">contact</li>
+            </a>
+        </ul>
+        <pre class="ninja"><h1 >Ninjaboy</h1><sub>mart</sub></pre>
+        <div class="searchbar">
+            <img class="search" src="icons/search.png">
+            <input type="text" placeholder="           Search a product">
+        </div>
+    </div>
+
+    <div class="first-container">
+        <div class="fc-1">
+            <img src="Mobiles/-original-imagtc5fz9spysyk.webp">
+            <h3>Mobiles</h3>
+        </div>
+        <div class="fc-1">
+            <img src="laptop/g614jj-n3088ws-gaming-laptop-asus-original-imah26j379f7jh9v.webp">
+            <h3>Lap top</h3>
+        </div>
+        <div class="fc-1">
+            <img src="smartwatch/-original-imah76jt64ffmwg4.webp">
+            <h3>Smart watch</h3>
+        </div>
+        <div class="fc-1">
+            <img src="camera/-original-imagrydmkxvjn2sh.webp">
+            <h3>Camera</h3>
+        </div>
+        <div class="fc-1">
+            <img
+                src="teddy/soft-toy-for-kidscombo-of-red-cap-and-someone-special-teddy-bear-original-imafzgjktfc4abdt.webp">
+            <h3>Teddy</h3>
+        </div>
+        <div class="fc-1">
+            <img src="trone/40-24-1-4k-wifi-dual-camera-drone-for-adults-kids-with-2-original-imagrfa6esxteknr.webp">
+            <h3>Trone</h3>
+        </div>
+        <div class="fc-1">
+            <img src="tv/jsw55gsqled-sansui-original-imah6s69phe5dvae.webp">
+            <h3>Smart Tv</h3>
+        </div>
+        <div class="fc-1">
+            <img src="headphone/-original-imah5vxhawerd9gz.webp">
+            <h3>Head Phone</h3>
+        </div>
+        <div class="fc-1">
+            <img src="dress/xxl-6001-dress-new-zwerlon-original-imah2thfnsuj9ysw.webp">
+            <h3>Dress</h3>
+        </div>
+    </div>
+    <div class="second-container">
+        <div class="sc-1">
+            <img src="4c2c108d39bcfbe6.webp">
+        </div>
+    </div>
+    <div class="third-container">
+        <div id="tc-1">
+            <img src="ec9bba198c534edb.webp">
+        </div>
+        <div id="tc-2">
+            <img src="5dbe24535d092e63.webp">
+        </div>
+    </div>
+    <div class="fourth-container">
+        <div id="fc-1">
+            <img src="smartwatch/-original-imah76jt64ffmwg4.webp">
+            <h3>Watch</h3>
+        </div>
+        <div id="fc-2">
+            <img src="dress/xxl-6001-dress-new-zwerlon-original-imah2thfnsuj9ysw.webp">
+            <h3>Women dress</h3>
+        </div>
+        <div id="fc-3">
+            <img src="headphone/-original-imah5vxhawerd9gz.webp">
+            <h3>Headphone</h3>
+        </div>
+        <div id="fc-4">
+            <img src="teddy/soft-toy-for-kidscombo-of-red-cap-and-someone-special-teddy-bear-original-imafzgjktfc4abdt.webp">
+            <h3>Toys</h3>
+        </div>
+        <div id="fc-5">
+            <img src="67630869246735d5.webp">
+        </div>
+    </div>
+    <div class="fifth-container">
+        <div id="box-1">
+            <div id="b1">
+                <img src="tv/-original-imah6swmczzgkztw.webp" >
+                <h4>Laptop</h4>
+            </div>
+            <div id="b2">
+                <img src="tv/-original-imah8uzcar7m3wdm.webp" >
+                <h4>Laptop</h4>
+            </div>
+            <div id="b3">
+                <img src="tv/jsw55gsqled-sansui-original-imah6s69phe5dvae.webp" >
+                <h4>Laptop</h4>
+            </div>
+            <div id="b4">
+                <img src="tv/magnifiq-80cm-32-inches-hdr-google-qled-tv-as32qhdx1-gtv-original-imah8ahkadjzqm98.webp" >
+                <h4>Laptop</h4>
+            </div>
+        </div>
+        <div id="box-2">
+            <div id="c1">
+                <img src="dress/m-t16-allover-print-blue-starvy-original-imah9gz5uvb3z9r4.webp" >
+                <h4>Laptop</h4>
+            </div>
+            <div id="c2">
+                <img src="dress/xl-vm-1695508-14081-v-mart-original-imah8xmhth8fcfvm.webp" >
+                <h4>Laptop</h4>
+            </div>
+            <div id="c3">
+                <img src="dress/xl-mhs-601-yellow-metronaut-original-imahfmgyymajsz2z.webp" >
+                <h4>Laptop</h4>
+            </div>
+            <div id="c4">
+                <img src="dress/xl-ss25-csmssrt8402-campus-sutra-original-imah8wq63eku6yfh.webp" >
+                <h4>Laptop</h4>
+            </div>
+            <div id="c5">
+                <img src="dress/xxl-frml-st2-vebnor-original-imah89h9ayzfwpxu.webp" >
+                <h4>Laptop</h4>
+            </div>
+            
+        </div>
+        <div id="box-3">
+            <div id="d1">
+                <img src="toys/famous-car-remote-control-3d-car-with-led-lights-chargeable-1-original-imagwwfyphzhvpmv.webp" >
+                <h4>Laptop</h4>
+            </div>
+            <div id="d2">
+                <img src="toys/high-speed-1-24-rechargeable-c-type-charging-mini-remote-control-original-imah6etqhbc9whgu.webp" >
+                <h4>Laptop</h4>
+            </div>
+            <div id="d3">
+                <img src="toys/monster-truck-friction-power-cars-with-big-rubber-tires-360-pack-original-imah9febwdten4yj.webp" >
+                <h4>Laptop</h4>
+            </div>
+            <div id="d4">
+                <img src="toys/rock-car-spring-wheels-1-20-scale-remote-control-3-caddle-toes-original-imah4yg8kqfwzuxx.webp" >
+                <h4>Laptop</h4>
+            </div>
+        </div>
+    </div>
+    <div class="sixth-container">
+        <div id="bx-1">
+            <div id="e1">
+                <img src="ring/-original-imagde4sc9nbdxhe.webp" >
+                <h4>Laptop</h4>
+            </div>
+            <div id="e2">
+                <img src="ring/-original-imagde4vagrm3uc4.webp" >
+                <h4>Laptop</h4>
+            </div>
+            <div id="e3">
+                <img src="chain/na-n-1-brado-special-rg-lavender-brado-jewellery-original-imahfb3reqaxwygg.webp" >
+                <h4>Laptop</h4>
+            </div>
+            <div id="e4">
+                <img src="chain/na-na-ycfjpd-283btrf-rg-yellow-chimes-original-imah9c4qgsdssnw4.webp" >
+                <h4>Laptop</h4>
+            </div>
+            <div id="e5">
+                <img src="chain/x21-lt-sm21-cp-od-kc-mangalsutra-earring-set-yembon-original-imagzbrzz5a4d5mq.webp" >
+                <h4>Laptop</h4>
+            </div>
+        </div>
+        <div id="bx-2">
+            <div id="g1">
+                <img src="smartwatch/-original-imah2ftvczcfuwgu.webp" >
+                <h4>Laptop</h4>
+            </div>
+            <div id="f2">
+                <img src="smartwatch/-original-imah6s6pdkac5zzj.webp" >
+                <h4>Laptop</h4>
+            </div>
+            <div id="f3">
+                <img src="smartwatch/-original-imah6s6pq7wxa4u6.webp" >
+                <h4>Laptop</h4>
+            </div>
+            <div id="f4">
+                <img src="smartwatch/-original-imah6s6pqgzukbgf.webp" >
+                <h4>Laptop</h4>
+            </div>
+        </div>
+        <div id="bx-3">
+            <div id="f1">
+                <img src="sofa/67-1-seater-rosewood-sheesham-125-25-r-963254-brown-wooden-original-imaggzkadxmjxt6g.webp" >
+                <h4>Laptop</h4>
+            </div>
+            <div id="f2">
+                <img src="sofa/right-facing-76-peach-260-velvet-no-75-royal-peach-lifestyle-original-imah94hzcqezh3hj.webp" >
+                <h4>Laptop</h4>
+            </div>
+            <div id="f3">
+                <img src="sofa/right-facing-154-brown-200-na-no-50-rolando-rhs-4-seater-l-shape-original-imah7he4y3n87smk.webp" >
+                <h4>Laptop</h4>
+            </div>
+            <div id="f4">
+                <img src="sofa/symmetrical-green-velvet-no-lw-tq-3-livewell-green-original-imahycxagrxtznfu.webp" >
+                <h4>Laptop</h4>
+            </div>
+        </div>
+    </div>
+    <div class="seventh-container" id="contact">
+        <h1>contact</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum et minima harum consequuntur voluptatem fugit
+            fuga pariatur quod temporibus molestias aspernatur eius provident unde, maiores ipsum quidem dolores. Saepe
+            iusto minima odit atque natus quae placeat cupiditate asperiores corrupti suscipit.</p>
+    </div>
+    
+</body>
+
+</html>

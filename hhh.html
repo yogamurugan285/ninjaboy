@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .fourth-container {
+            margin-top: 20px;
+            margin-right: 10px;
+            margin-left : 10px;
+            display: grid;
+            border-radius: 20px;
+            width: 100vw;
+            height: 220px;
+            justify-items: start ;
+            background-color: rgba(143, 128, 128, 0.267);
+            grid-template-areas:'fc-1 fc-2 fc-5 fc-5' 'fc-3 fc-4 fc-5 fc-5'  ;
+            grid-template-columns:170px 170px 1fr 1fr;
+            grid-template-rows: 1fr 1fr ;
+        }
+        .fourth-container  img{
+            
+            border-radius: 10px;
+            height: 70px;
+            width: 100px;
+            border: 5px solid white;
+        }
+        .fourth-container #fc-5 img{
+            
+            border: 2px solid white;
+            border-radius: 10px;
+            width: 1030px;
+            height: 220px;
+        }
+        #fc-1,#fc-2, #fc-3, #fc-4 {
+            text-align: center;
+            font-size: 10px;
+        }
+        #fc-1{
+            grid-area: fc-1;
+        }
+        #fc-2{
+            grid-area: fc-2;
+        }
+        #fc-3{
+            grid-area: fc-3;
+        }
+        #fc-4{
+            grid-area: fc-4;
+        }
+        #fc-5{
+            grid-area: fc-5;
+        }
+    </style>
+</head>
+<body>
+    <div class="fourth-container">
+        <div id="fc-1">
+            <img src="smartwatch/-original-imah76jt64ffmwg4.webp">
+            <h3>Watch</h3>
+        </div>
+        <div id="fc-2">
+            <img src="dress/xxl-6001-dress-new-zwerlon-original-imah2thfnsuj9ysw.webp">
+            <h3>Women dress</h3>
+        </div>
+        <div id="fc-3">
+            <img src="headphone/-original-imah5vxhawerd9gz.webp">
+            <h3>Headphone</h3>
+        </div>
+        <div id="fc-4">
+            <img src="toys/soft-toy-for-kidscombo-of-red-cap-and-someone-special-teddy-bear-original-imafzgjktfc4abdt.webp">
+            <h3>Toys</h3>
+        </div>
+        <div id="fc-5">
+            <img src="67630869246735d5.webp">
+        </div>
+    </div>
+</body>
+</html>
